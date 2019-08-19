@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Main.min.css';
+import './Main.css';
 import Hero from '../Hero/Hero';
 import Speakers from '../Speakers/Speakers';
 import Details from '../Details/Details';

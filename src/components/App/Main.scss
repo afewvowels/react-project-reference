@@ -14,22 +14,22 @@
 
 /* Component styling */
 @import "./App.scss";
-@import "./Header.scss";
-@import "./Hero.scss";
-@import "./Speaker.scss";
-@import "./Speakers.scss";
-@import "./DetailItem.scss";
-@import "./Details.scss";
-@import "./Map.scss";
-@import "./Schedule.scss";
-@import "./ScheduleItem.scss";
-@import "./Banner1.scss";
-@import "./PurchaseOptions.scss";
-@import "./PurchaseOption.scss";
-@import "./Sponsors.scss";
-@import "./FAQ.scss";
-@import "./Question.scss";
-@import "./Footer.scss";
+@import "../Header/Header.scss";
+@import "../Hero/Hero.scss";
+@import "../Speakers/Speaker.scss";
+@import "../Speakers/Speakers.scss";
+@import "../Details/DetailItem.scss";
+@import "../Details/Details.scss";
+@import "../Map/Map.scss";
+@import "../Schedule/Schedule.scss";
+@import "../Schedule/ScheduleItem.scss";
+@import "../Banner1/Banner1.scss";
+@import "../PurchaseOptions/PurchaseOptions.scss";
+@import "../PurchaseOPtions/PurchaseOption.scss";
+@import "../Sponsors/Sponsors.scss";
+@import "../Faq/FAQ.scss";
+@import "../Faq/Question.scss";
+@import "../Footer/Footer.scss";
 
 /* Fixed width sizes of main container */
 .App {
