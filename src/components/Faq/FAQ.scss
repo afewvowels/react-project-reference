@@ -1,0 +1,55 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for Faq component.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+ @import '../Scss/Utility.scss';
+
+.faq {
+  margin: 0 0 6rem 0;
+}
+
+.faq__heading {
+  text-transform: uppercase;
+  color: $accent1;
+  font-size: $h4 * .95;
+  margin: 0 0 6rem 0;
+}
+
+.faq__container {
+  display: grid;
+  grid-template:
+        'one two' auto
+        'three four' auto
+        / 1fr 1fr;
+  grid-gap: 2rem;
+  @include breakpoint(tablet-landscape) {
+    grid-template:
+        'one' auto
+        'two' auto
+        'three' auto
+        'four' auto
+        / auto;
+  }
+}
+
+.faq__container:nth-child(1) {
+  grid-area: one;
+}
+
+.faq__container:nth-child(2) {
+  grid-area: two;
+}
+
+.faq__container:nth-child(3) {
+  grid-area: three;
+}
+
+.faq__container:nth-child(4) {
+  grid-area: four;
+}

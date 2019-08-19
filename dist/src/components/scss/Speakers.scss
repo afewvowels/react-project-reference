@@ -1,0 +1,59 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for Speakers component.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+
+@import './Utility.scss';
+
+.speakers {
+  display: grid;
+  grid-template:
+            'headings' auto
+            'speakers' auto
+            / 1fr;
+  background-color: $dark3;
+  padding: 6rem 0;
+}
+
+.speakers__headings {
+  grid-area: headings;
+  justify-self: flex-start;
+  margin: 0 0 6rem 0;
+  color: $light;
+}
+
+.speakers__headings__h2 {
+  margin: 0 0 0.3rem 0;
+  @include font-display;
+  font-size: $h1;
+}
+
+.speakers__headings__p {
+  margin: 0;
+  @include font-body;
+  font-size: $h1 * .6;
+  color: $accent2;
+}
+
+.speakers__cards {
+  grid-area: speakers;
+  width: 100%;
+  @include flexbox-horizontal;
+  @include breakpoint(tablet-landscape) {
+    @include flexbox-vertical;
+  }
+}
+
+// Lobotomized owl selector
+// * + * == only two elements next to each other
+.speakers__cards > * + * {
+  @include breakpoint(tablet-landscape) {
+    margin-top: 3rem;
+  }
+}

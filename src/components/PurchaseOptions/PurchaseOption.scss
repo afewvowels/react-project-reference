@@ -1,0 +1,77 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for single Purchase Option component.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+@import '../Scss/Utility.scss';
+
+.option {
+  @include font-display;
+  @include flexbox-vertical;
+  padding: 3rem 4rem;
+  border: 2px solid $light;
+  border-radius: 0.5rem;
+  color: $light;
+  transition: all 0.25s ease;
+  z-index: 1;
+}
+
+.option--active {
+  background-color: $accent1;
+  color: $light;
+  transform: scale(1.15);
+  border: none;
+  z-index: 5;
+}
+
+.option > * + * {
+  margin: 2rem 0 0 0;
+}
+
+.option__title {
+  margin: 0 0 0 0;
+  font-size: $h5;
+}
+
+.option__cost {
+  color: $accent1;
+  font-size: $h1 * 1.25;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.option__cost::before {
+  content: '$';
+  position: absolute;
+  left: -15px;
+  top: 16px;
+  font-size: $h5;
+}
+
+.option__cost--active {
+  color: $light;
+}
+
+.option__description,
+.option__button {
+  @include font-body;
+}
+
+.option__description {
+  text-align: center;
+}
+
+.option__button {
+  background-color: $accent2;
+  color: $light;
+  padding: 1rem 2rem;
+  font-size: $h5 * .75;
+  @include font-display;
+  border-radius: 0.5rem;
+  border: none;
+}

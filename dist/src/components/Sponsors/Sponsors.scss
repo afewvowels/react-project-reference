@@ -1,0 +1,57 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for Sponsors component.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+@import "../Scss/Utility.scss";
+
+.sponsors {
+  color: $light;
+  padding: 6rem 0;
+}
+
+.sponsors__description {
+  @include font-body;
+  margin: 0 0 6rem 0;
+  color: $accent2;
+  font-size: $h1 * .6;
+}
+
+.sponsors__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 2rem 0;
+  @include breakpoint(tablet-portrait) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.sponsors__list__item {
+  background-color: $accent2-dark;
+  width: 365px;
+  height: 150px;
+  @include flexbox;
+  @include font-display;
+  font-size: 2.5rem;
+  @include breakpoint(desktop-small) {
+    width: 300px;
+    font-size: 2.2rem;
+  }
+  @include breakpoint(tablet-landscape) {
+    width: 230px;
+    font-size: 1.75rem;
+  }
+  @include breakpoint(tablet-portrait) {
+    margin: 0 0 2rem 0;
+    width: 450px;
+    height: 150px;
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,19 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for main App. Generally top-level
+ * styling is applie
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+@import './Utility.scss';
+
+body, html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: $dark3;
+}

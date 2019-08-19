@@ -1,0 +1,50 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Main style document, pulls in all other Component
+ * Scss files and combines them to create one
+ * main css file. You'll need to compile this file
+ * to see changes in component scss files
+ * on your development server. This is the only scss
+ * file that the main App.js pulls in.
+ *
+ */
+
+
+/* Component styling */
+@import "./App.scss";
+@import "./Header.scss";
+@import "./Hero.scss";
+@import "./Speaker.scss";
+@import "./Speakers.scss";
+@import "./DetailItem.scss";
+@import "./Details.scss";
+@import "./Map.scss";
+@import "./Schedule.scss";
+@import "./ScheduleItem.scss";
+@import "./Banner1.scss";
+@import "./PurchaseOptions.scss";
+@import "./PurchaseOption.scss";
+@import "./Sponsors.scss";
+@import "./FAQ.scss";
+@import "./Question.scss";
+@import "./Footer.scss";
+
+/* Fixed width sizes of main container */
+.App {
+  width: 1200px;
+  margin: auto;
+  @include breakpoint(desktop-small) {
+    width: 980px;
+  }
+  @include breakpoint(tablet-landscape) {
+    width: 750px;
+  }
+  @include breakpoint (tablet-portrait) {
+    width: 500px;
+  }
+  @include breakpoint (phone-only) {
+    width: 100%;
+  }
+}

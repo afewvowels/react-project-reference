@@ -1,0 +1,42 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for Detail Item component.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+ @import './Utility.scss';
+
+.detailitem {
+  width: 100%;
+  @include flexbox;
+  justify-content: flex-start;
+}
+
+.detailitem__image {
+  width: 9rem;
+  height: auto;
+  margin: 0 2rem 0 0;
+}
+
+.detailitem__text {
+  @include flexbox-vertical;
+  align-items: flex-start;
+}
+
+.detailitem__text__h3,
+.detailitem__text__p {
+  margin: 0;
+}
+
+.detailitem__text__h3 {
+  @include font-display;
+  margin: 0 0 1rem 0;
+}
+
+.detailitem__text__p {
+  line-height: 1.75rem;
+}

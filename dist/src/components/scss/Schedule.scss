@@ -1,0 +1,85 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for Schedule component.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+ @import './Utility.scss';
+
+.schedule {
+  @include flexbox-vertical;
+  @include font-display;
+  color: white;
+  margin: 0 0 6rem 0;
+}
+
+.schedule__p {
+  @include font-body;
+}
+
+.schedule__items {
+  display: grid;
+  grid-template:
+    'one two' 1fr
+    'three four' 1fr
+    'five six' 1fr
+    / 1fr 1fr;
+  grid-gap: 3rem;
+  @include breakpoint(tablet-portrait) {
+    grid-template:
+      'one' 1fr
+      'two' 1fr
+      'three' 1fr
+      'four' 1fr
+      'five' 1fr
+      'six' 1fr
+      / 1fr;
+  }
+}
+
+.schedule__items:nth-child(1) {
+  grid-area: one;
+}
+
+.schedule__items:nth-child(2) {
+  grid-area: two;
+}
+
+.schedule__items:nth-child(3) {
+  grid-area: three;
+}
+
+.schedule__items:nth-child(4) {
+  grid-area: four;
+}
+
+.schedule__items:nth-child(5) {
+  grid-area: five;
+}
+
+.schedule__items:nth-child(6) {
+  grid-area: six;
+}
+
+.schedule__h2,
+.schedule__p {
+  margin: 0 0 2rem 0;
+  align-self: flex-start;
+}
+
+.schedule__h2 {
+  margin: 0 0 0.3rem 0;
+  @include font-display;
+  font-size: $h1;
+}
+
+.schedule__p {
+  margin: 0 0 6rem 0;
+  @include font-body;
+  font-size: $h1 * .6;
+  color: $accent2;
+}

@@ -1,0 +1,56 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for Details component.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+@import '../Scss/Utility.scss';
+
+.details {
+  color: white;
+  margin: 0 0 6rem 0;
+}
+
+.details__h3 {
+  @include font-body;
+  font-size: $h3 * .75;
+  color: $accent2;
+  margin: 0 0 6rem 0;
+}
+
+.details__items {
+  display: grid;
+  grid-template:
+          'one two' auto
+          'three four' auto
+          / 1fr 1fr;
+  grid-gap: 4rem 2rem;
+  @include breakpoint(tablet-portrait) {
+    grid-template:
+      'one' 1fr
+      'two' 1fr
+      'three' 1fr
+      'four' 1fr
+      / 1fr;
+  }
+}
+
+.details__items:nth-child(1) {
+  grid-area: one;
+}
+
+.details__items:nth-child(2) {
+  grid-area: two;
+}
+
+.details__items:nth-child(3) {
+  grid-area: three;
+}
+
+.details__items:nth-child(4) {
+  grid-area: four;
+}

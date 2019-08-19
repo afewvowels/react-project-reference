@@ -1,0 +1,58 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for Purchase Options component.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+ @import '../Scss/Utility.scss';
+
+.purchaseoptions {
+  margin: 6rem 0;
+}
+
+.purchaseoptions__h2 {
+  @include font-display;
+  font-size: $h1;
+  font-size: $h1 * .9;
+  color: $light;
+  margin: 0 0 0.3rem 0;
+}
+
+.purchaseoptions__p {
+  @include font-body;
+  color: $accent2;
+  font-size: $h1 * .6;
+  margin: 0 0 6rem 0;
+}
+
+.purchaseoptions__items {
+  display: grid;
+  grid-template:
+        'one two three' 1fr
+        / 1fr 1fr 1fr;
+  cursor: pointer;
+  @include breakpoint(tablet-landscape) {
+    grid-template:
+        'one' 1fr
+        'two' 1fr
+        'three' 1fr
+        / 1fr;
+    grid-gap: 2rem;
+  }
+}
+
+.purchaseoptions__items:nth-child(1) {
+  grid-area: one;
+}
+
+.purchaseoptions__items:nth-child(2) {
+  grid-area: two;
+}
+
+.purchaseoptions__items:nth-child(3) {
+  grid-area: three;
+}

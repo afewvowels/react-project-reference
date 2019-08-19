@@ -1,0 +1,50 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for single schedule
+ * line item component.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+ @import '../Scss/Utility.scss';
+
+.scheduleitem {
+  background-color: $accent2-dark;
+  border-bottom: 4px solid $accent2;
+  height: calc(15rem + 3px);
+}
+
+.scheduleitem__wrapper {
+  padding: 2rem;
+  border-bottom: 3px solid transparent;
+  position: relative;
+  overflow: hidden;
+  height: 11rem;
+}
+
+.scheduleitem__wrapper__h3,
+.scheduleitem__wrapper__p {
+  position: relative;
+  z-index: 4;
+}
+
+.scheduleitem__wrapper__h3 {
+  margin: 0 0 1.5rem 0;
+}
+
+.scheduleitem__wrapper__p {
+  @include font-body;
+  line-height: 1.75rem;
+  margin: 0;
+}
+
+.scheduleitem__wrapper__img {
+  width: 15rem;
+  position: absolute;
+  bottom: -35%;
+  right: -10%;
+  z-index: 3;
+}

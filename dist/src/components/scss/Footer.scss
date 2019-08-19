@@ -1,0 +1,176 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for Footer component.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+ @import './Utility.scss';
+
+.footer {
+  @include font-display;
+  color: $light;
+}
+
+.footer__upper {
+  display: grid;
+  grid-template:
+        '. . .' 1fr
+        'about support info' auto
+        '. . .' 1fr
+        / 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+  height: 404px;
+  @include breakpoint(tablet-landscape) {
+    grid-template:
+        'about' auto
+        'support' auto
+        'info' auto
+        / 1fr;
+    grid-column-gap: 0;
+    height: 554px;
+  }
+}
+
+.footer__lower__background,
+.footer__upper__background {
+  height: 100%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer__upper__background {
+  grid-column: 1 / 4;
+  grid-row: 1 / 4;
+  background-color: $dark4;
+  @include breakpoint(tablet-landscape) {
+    grid-column: 1 / 2;
+  }
+}
+
+.footer__lower__background {
+  background-color: $accent1;
+}
+
+.footer__upper__about,
+.footer__upper__support,
+.footer__upper__info {
+  position: relative;
+  z-index: 5;
+  align-self: flex-start;
+}
+
+.footer__upper__about {
+  grid-area: about;
+  @include breakpoint(tablet-landscape) {
+    align-self: flex-end;
+  }
+}
+
+.footer__upper__about__heading,
+.footer__upper__about__paragraph {
+  @include font-body;
+}
+
+.footer__upper__about__heading,
+.footer__upper__support__heading,
+.footer__upper__info__heading {
+  @include font-display;
+  font-size: 1.15rem;
+  color: $accent1;
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.footer__upper__about__paragraph {
+  line-height: $line__height;
+}
+
+.footer__upper__support {
+  grid-area: support;
+  @include breakpoint(tablet-landscape) {
+    align-self: center;
+  }
+}
+
+.footer__upper__support__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__upper__support__list__item {
+  border-bottom: 1px solid $dark5;
+  padding: 0.75rem 0;
+  position: relative;
+  @include font-body;
+}
+
+.footer__upper__support__list__item::after {
+  position: absolute;
+  right: 0;
+  top: 1px;
+  width: 2.6rem;
+  height: 2.6rem;
+  content: '';
+  background-image: url(../../img/arrow.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer__upper__support__list__item > a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer__upper__info {
+  grid-area: info;
+  @include breakpoint(tablet-landscape) {
+    align-self: flex-start;
+  }
+}
+
+.footer__upper__info__paragraph {
+  line-height: $line__height;
+  @include font-body;
+}
+
+.footer__lower {
+  height: 80px;
+  display: grid;
+  grid-template:
+        'copyright social' auto
+        / 1fr 1fr;
+  background-color: transparent;
+}
+
+.footer__lower__copyright,
+.footer__lower__social {
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  align-self: center;
+}
+
+.footer__lower__copyright {
+  grid-area: copyright;
+  justify-self: flex-start;
+}
+
+.footer__lower__social {
+  grid-area: social;
+  justify-self: flex-end;
+}
+
+.footer__lower__background {
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+}

@@ -1,0 +1,30 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for map component.
+ * Slightly tricky CSS here because the map
+ * is in a fixed-width container and needs
+ * to stretch the full width of the screen.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+@import './Utility.scss';
+
+.map {
+  height: 30rem;
+  margin: 0 0 6rem 0;
+}
+
+.map__wrapper {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  border-bottom: 4px solid $accent1;
+}

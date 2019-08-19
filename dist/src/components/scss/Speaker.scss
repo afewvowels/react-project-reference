@@ -1,0 +1,56 @@
+/**
+ * Keith Smith
+ * 30 July 2019
+ *
+ * Holds styling for Speaker component.
+ *
+ * Organized in top down fashion that matches
+ * the component's html structure.
+ */
+
+@import './Utility.scss';
+
+.speaker {
+  width: 350px;
+  height: auto;
+  color: white;
+  @include font-body;
+  @include breakpoint(desktop-small) {
+    width: 300px;
+  }
+  @include breakpoint(tablet-landscape) {
+    width: 350px;
+  }
+}
+
+.speaker__image {
+  border: 3px solid;
+  border-image-source: linear-gradient($accent2 0, $accent1 100%);
+  border-image-slice: 1;
+  width: 100%;
+  height: auto;
+  margin: 0 0 1rem 0;
+  box-sizing: border-box;
+}
+
+.speaker__textwrapper {
+  margin: 0;
+}
+
+.speaker__textwrapper__h2 {
+  @include font-display;
+  margin: 0 0 0.3rem 0;
+  font-size: $h2 * .7;
+}
+
+.speaker__textwrapper__h3 {
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+  @include font-body;
+  font-size: $h3 * .5;
+}
+
+.speaker__textwrapper__p {
+  margin: 0;
+  line-height: 1.75rem;
+}
