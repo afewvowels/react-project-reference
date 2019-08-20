@@ -2655,12 +2655,14 @@
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important; } }
 
+/*
 body, html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #071c22; }
-
+  background-color: $dark3;
+}
+*/
 /**
  * Keith Smith
  * 30 July 2019
