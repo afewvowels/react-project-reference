@@ -1,0 +1,35 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: react-spring
+    versions:
+    - 8.0.27
+    - 9.0.0
+    - 9.1.0
+    - 9.1.1
+  - dependency-name: styled-components
+    versions:
+    - 5.2.1
+    - 5.2.2
+  - dependency-name: react-scripts
+    versions:
+    - 4.0.1
+    - 4.0.2
+  - dependency-name: react-styleguidist
+    versions:
+    - 11.1.5
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+  - dependency-name: handlebars
+    versions:
+    - 4.7.6
